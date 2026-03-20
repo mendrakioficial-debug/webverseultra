@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebVerse Ultra MAX</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="particles" id="particles"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+
+  <div class="container">
+
+    <header>
+      <div class="topbar glass">
+        <div class="brand">
+          <div class="logo">🌌</div>
+          <div>
+            <h1>WebVerse Ultra MAX</h1>
+            <p>arcade, IA, social e muito mais</p>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <button class="btn" onclick="toggleMusic()">🎵 Música</button>
+          <button class="btn" onclick="toggleSfx()">🔊 Som</button>
+          <button class="btn" onclick="openSection('jogos')">Jogos</button>
+          <button class="btn" onclick="openSection('ia')">IA</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MENU -->
+    <nav>
+      <button class="nav-btn active" onclick="openSection('inicio')">Início</button>
+      <button class="nav-btn" onclick="openSection('jogos')">Jogos</button>
+      <button class="nav-btn" onclick="openSection('ia')">IA</button>
+    </nav>
+
+    <!-- INICIO -->
+    <section class="section active" id="inicio">
+      <div class="panel">
+        <h2>Bem-vindo ao WebVerse</h2>
+        <p>Seu site está funcionando 🔥</p>
+      </div>
+    </section>
+
+    <!-- JOGOS -->
+    <section class="section" id="jogos">
+      <div class="panel">
+        <h2>Jogos</h2>
+        <button class="btn" onclick="selectGame('snake')">🐍 Snake</button>
+        <button class="btn" onclick="selectGame('tic')">❌⭕ Jogo da Velha</button>
+      </div>
+    </section>
+
+    <!-- IA -->
+    <section class="section" id="ia">
+      <div class="panel">
+        <h2>VerseAI</h2>
+        <input id="aiInput" class="input" placeholder="Pergunte algo...">
+        <button class="btn" onclick="askVerseAI()">Enviar</button>
+        <div id="aiResponse" class="ai-response-box"></div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>WebVerse Ultra MAX</p>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
